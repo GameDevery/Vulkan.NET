@@ -1,5 +1,5 @@
 # Vulkan.NET
-This repository contains low-level bindings for Vulkan used in Evergine for .NET 8.0.
+This repository contains low-level bindings for Vulkan used in Evergine for .NET 10.
 This binding is generated from vk.xml file included in the KhronosRegistry:
 https://github.com/KhronosGroup/Vulkan-Docs/blob/main/xml/vk.xml.
 
