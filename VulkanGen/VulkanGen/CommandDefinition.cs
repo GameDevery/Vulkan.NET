@@ -72,7 +72,8 @@ namespace VulkanGen
                 signature.Append($"{convertedName}, ");
             }
 
-            signature.Length -= 2;
+            if (signature.Length >= 2)
+                signature.Length -= 2;
 
             return signature.ToString();
         }

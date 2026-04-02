@@ -182,7 +182,7 @@ namespace Evergine.Bindings.Vulkan
 		[FieldOffset(0)]
 		public VkTexelBufferDescriptorInfoEXT* pTexelBuffer;
 		[FieldOffset(0)]
-		public VkDeviceAddressRangeEXT* pAddressRange;
+		public VkDeviceAddressRangeKHR* pAddressRange;
 		[FieldOffset(0)]
 		public VkTensorViewCreateInfoARM* pTensorARM;
 	}

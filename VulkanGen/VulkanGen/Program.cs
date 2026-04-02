@@ -62,19 +62,15 @@ namespace VulkanGen
                                 file.Write(",\n");
 
                             type = func.Parameters[p].Type;
-                            var typeDef = vulkanSpec.TypeDefs.Find(t => t.Name == type);
-                            if (typeDef != null)
+                            int pointerLevel = 0;
+                            while (type.EndsWith("*"))
                             {
-                                vulkanSpec.BaseTypes.TryGetValue(typeDef.Type, out type);
+                                pointerLevel++;
+                                type = type.Substring(0, type.Length - 1);
                             }
+                            convertedType = Helpers.GetPrettyEnumName(Helpers.ConvertToCSharpType(type, pointerLevel, vulkanSpec));
 
-                            convertedType = Helpers.ConvertBasicTypes(type);
-                            if (convertedType == string.Empty)
-                            {
-                                convertedType = type;
-                            }
-
-                            file.Write($"\t\t{Helpers.GetPrettyEnumName(convertedType)} {Helpers.ValidatedName(func.Parameters[p].Name)}");
+                            file.Write($"\t\t{convertedType} {Helpers.ValidatedName(func.Parameters[p].Name)}");
                         }
                     }
                     file.Write(");\n\n");
@@ -95,7 +91,7 @@ namespace VulkanGen
                     if (e.Type == EnumType.Bitmask)
                         file.WriteLine("\t[Flags]");
 
-                    file.WriteLine($"\tpublic enum {Helpers.GetPrettyEnumName(e.Name)}");
+                    file.WriteLine($"\tpublic enum {Helpers.GetPrettyEnumName(e.Name)}" + (e.Is64Bit ? " : ulong" : ""));
                     file.WriteLine("\t{");
 
                     if (!(e.Values.Exists(v => v.Value == 0)))
@@ -245,7 +241,7 @@ namespace VulkanGen
                 foreach (var handle in vulkanVersion.Handles)
                 {
                     file.WriteLine($"\tpublic partial struct {handle.Name} : IEquatable<{handle.Name}>");
-                    file.WriteLine("{");
+                    file.WriteLine("\t{");
                     string handleType = handle.Dispatchable ? "IntPtr" : "ulong";
                     string nullValue = handle.Dispatchable ? "IntPtr.Zero" : "0";
 
@@ -261,7 +257,7 @@ namespace VulkanGen
                     file.WriteLine($"\t\tpublic bool Equals({handle.Name} h) => Handle == h.Handle;");
                     file.WriteLine($"\t\tpublic override bool Equals(object o) => o is {handle.Name} h && Equals(h);");
                     file.WriteLine($"\t\tpublic override int GetHashCode() => Handle.GetHashCode();");
-                    file.WriteLine("}\n");
+                    file.WriteLine("\t}\n");
                 }
 
                 file.WriteLine("}");

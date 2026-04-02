@@ -3048,6 +3048,138 @@ namespace Evergine.Bindings.Vulkan
 			=> vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT_ptr(device, pInfo, pData);
 
 		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdBindIndexBuffer3KHRDelegate(VkCommandBuffer commandBuffer, VkBindIndexBuffer3InfoKHR* pInfo);
+		private static vkCmdBindIndexBuffer3KHRDelegate vkCmdBindIndexBuffer3KHR_ptr;
+		public static void vkCmdBindIndexBuffer3KHR(VkCommandBuffer commandBuffer, VkBindIndexBuffer3InfoKHR* pInfo)
+			=> vkCmdBindIndexBuffer3KHR_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdBindVertexBuffers3KHRDelegate(VkCommandBuffer commandBuffer, uint firstBinding, uint bindingCount, VkBindVertexBuffer3InfoKHR* pBindingInfos);
+		private static vkCmdBindVertexBuffers3KHRDelegate vkCmdBindVertexBuffers3KHR_ptr;
+		public static void vkCmdBindVertexBuffers3KHR(VkCommandBuffer commandBuffer, uint firstBinding, uint bindingCount, VkBindVertexBuffer3InfoKHR* pBindingInfos)
+			=> vkCmdBindVertexBuffers3KHR_ptr(commandBuffer, firstBinding, bindingCount, pBindingInfos);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDrawIndirect2KHRDelegate(VkCommandBuffer commandBuffer, VkDrawIndirect2InfoKHR* pInfo);
+		private static vkCmdDrawIndirect2KHRDelegate vkCmdDrawIndirect2KHR_ptr;
+		public static void vkCmdDrawIndirect2KHR(VkCommandBuffer commandBuffer, VkDrawIndirect2InfoKHR* pInfo)
+			=> vkCmdDrawIndirect2KHR_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDrawIndexedIndirect2KHRDelegate(VkCommandBuffer commandBuffer, VkDrawIndirect2InfoKHR* pInfo);
+		private static vkCmdDrawIndexedIndirect2KHRDelegate vkCmdDrawIndexedIndirect2KHR_ptr;
+		public static void vkCmdDrawIndexedIndirect2KHR(VkCommandBuffer commandBuffer, VkDrawIndirect2InfoKHR* pInfo)
+			=> vkCmdDrawIndexedIndirect2KHR_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDispatchIndirect2KHRDelegate(VkCommandBuffer commandBuffer, VkDispatchIndirect2InfoKHR* pInfo);
+		private static vkCmdDispatchIndirect2KHRDelegate vkCmdDispatchIndirect2KHR_ptr;
+		public static void vkCmdDispatchIndirect2KHR(VkCommandBuffer commandBuffer, VkDispatchIndirect2InfoKHR* pInfo)
+			=> vkCmdDispatchIndirect2KHR_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdCopyMemoryKHRDelegate(VkCommandBuffer commandBuffer, VkCopyDeviceMemoryInfoKHR* pCopyMemoryInfo);
+		private static vkCmdCopyMemoryKHRDelegate vkCmdCopyMemoryKHR_ptr;
+		public static void vkCmdCopyMemoryKHR(VkCommandBuffer commandBuffer, VkCopyDeviceMemoryInfoKHR* pCopyMemoryInfo)
+			=> vkCmdCopyMemoryKHR_ptr(commandBuffer, pCopyMemoryInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdCopyMemoryToImageKHRDelegate(VkCommandBuffer commandBuffer, VkCopyDeviceMemoryImageInfoKHR* pCopyMemoryInfo);
+		private static vkCmdCopyMemoryToImageKHRDelegate vkCmdCopyMemoryToImageKHR_ptr;
+		public static void vkCmdCopyMemoryToImageKHR(VkCommandBuffer commandBuffer, VkCopyDeviceMemoryImageInfoKHR* pCopyMemoryInfo)
+			=> vkCmdCopyMemoryToImageKHR_ptr(commandBuffer, pCopyMemoryInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdCopyImageToMemoryKHRDelegate(VkCommandBuffer commandBuffer, VkCopyDeviceMemoryImageInfoKHR* pCopyMemoryInfo);
+		private static vkCmdCopyImageToMemoryKHRDelegate vkCmdCopyImageToMemoryKHR_ptr;
+		public static void vkCmdCopyImageToMemoryKHR(VkCommandBuffer commandBuffer, VkCopyDeviceMemoryImageInfoKHR* pCopyMemoryInfo)
+			=> vkCmdCopyImageToMemoryKHR_ptr(commandBuffer, pCopyMemoryInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdUpdateMemoryKHRDelegate(VkCommandBuffer commandBuffer, VkDeviceAddressRangeKHR* pDstRange, VkAddressCommandFlagsKHR dstFlags, ulong dataSize, void* pData);
+		private static vkCmdUpdateMemoryKHRDelegate vkCmdUpdateMemoryKHR_ptr;
+		public static void vkCmdUpdateMemoryKHR(VkCommandBuffer commandBuffer, VkDeviceAddressRangeKHR* pDstRange, VkAddressCommandFlagsKHR dstFlags, ulong dataSize, void* pData)
+			=> vkCmdUpdateMemoryKHR_ptr(commandBuffer, pDstRange, dstFlags, dataSize, pData);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdFillMemoryKHRDelegate(VkCommandBuffer commandBuffer, VkDeviceAddressRangeKHR* pDstRange, VkAddressCommandFlagsKHR dstFlags, uint data);
+		private static vkCmdFillMemoryKHRDelegate vkCmdFillMemoryKHR_ptr;
+		public static void vkCmdFillMemoryKHR(VkCommandBuffer commandBuffer, VkDeviceAddressRangeKHR* pDstRange, VkAddressCommandFlagsKHR dstFlags, uint data)
+			=> vkCmdFillMemoryKHR_ptr(commandBuffer, pDstRange, dstFlags, data);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdCopyQueryPoolResultsToMemoryKHRDelegate(VkCommandBuffer commandBuffer, VkQueryPool queryPool, uint firstQuery, uint queryCount, VkStridedDeviceAddressRangeKHR* pDstRange, VkAddressCommandFlagsKHR dstFlags, VkQueryResultFlags queryResultFlags);
+		private static vkCmdCopyQueryPoolResultsToMemoryKHRDelegate vkCmdCopyQueryPoolResultsToMemoryKHR_ptr;
+		public static void vkCmdCopyQueryPoolResultsToMemoryKHR(VkCommandBuffer commandBuffer, VkQueryPool queryPool, uint firstQuery, uint queryCount, VkStridedDeviceAddressRangeKHR* pDstRange, VkAddressCommandFlagsKHR dstFlags, VkQueryResultFlags queryResultFlags)
+			=> vkCmdCopyQueryPoolResultsToMemoryKHR_ptr(commandBuffer, queryPool, firstQuery, queryCount, pDstRange, dstFlags, queryResultFlags);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDrawIndirectCount2KHRDelegate(VkCommandBuffer commandBuffer, VkDrawIndirectCount2InfoKHR* pInfo);
+		private static vkCmdDrawIndirectCount2KHRDelegate vkCmdDrawIndirectCount2KHR_ptr;
+		public static void vkCmdDrawIndirectCount2KHR(VkCommandBuffer commandBuffer, VkDrawIndirectCount2InfoKHR* pInfo)
+			=> vkCmdDrawIndirectCount2KHR_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDrawIndexedIndirectCount2KHRDelegate(VkCommandBuffer commandBuffer, VkDrawIndirectCount2InfoKHR* pInfo);
+		private static vkCmdDrawIndexedIndirectCount2KHRDelegate vkCmdDrawIndexedIndirectCount2KHR_ptr;
+		public static void vkCmdDrawIndexedIndirectCount2KHR(VkCommandBuffer commandBuffer, VkDrawIndirectCount2InfoKHR* pInfo)
+			=> vkCmdDrawIndexedIndirectCount2KHR_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdBeginConditionalRendering2EXTDelegate(VkCommandBuffer commandBuffer, VkConditionalRenderingBeginInfo2EXT* pConditionalRenderingBegin);
+		private static vkCmdBeginConditionalRendering2EXTDelegate vkCmdBeginConditionalRendering2EXT_ptr;
+		public static void vkCmdBeginConditionalRendering2EXT(VkCommandBuffer commandBuffer, VkConditionalRenderingBeginInfo2EXT* pConditionalRenderingBegin)
+			=> vkCmdBeginConditionalRendering2EXT_ptr(commandBuffer, pConditionalRenderingBegin);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdBindTransformFeedbackBuffers2EXTDelegate(VkCommandBuffer commandBuffer, uint firstBinding, uint bindingCount, VkBindTransformFeedbackBuffer2InfoEXT* pBindingInfos);
+		private static vkCmdBindTransformFeedbackBuffers2EXTDelegate vkCmdBindTransformFeedbackBuffers2EXT_ptr;
+		public static void vkCmdBindTransformFeedbackBuffers2EXT(VkCommandBuffer commandBuffer, uint firstBinding, uint bindingCount, VkBindTransformFeedbackBuffer2InfoEXT* pBindingInfos)
+			=> vkCmdBindTransformFeedbackBuffers2EXT_ptr(commandBuffer, firstBinding, bindingCount, pBindingInfos);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdBeginTransformFeedback2EXTDelegate(VkCommandBuffer commandBuffer, uint firstCounterRange, uint counterRangeCount, VkBindTransformFeedbackBuffer2InfoEXT* pCounterInfos);
+		private static vkCmdBeginTransformFeedback2EXTDelegate vkCmdBeginTransformFeedback2EXT_ptr;
+		public static void vkCmdBeginTransformFeedback2EXT(VkCommandBuffer commandBuffer, uint firstCounterRange, uint counterRangeCount, VkBindTransformFeedbackBuffer2InfoEXT* pCounterInfos)
+			=> vkCmdBeginTransformFeedback2EXT_ptr(commandBuffer, firstCounterRange, counterRangeCount, pCounterInfos);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdEndTransformFeedback2EXTDelegate(VkCommandBuffer commandBuffer, uint firstCounterRange, uint counterRangeCount, VkBindTransformFeedbackBuffer2InfoEXT* pCounterInfos);
+		private static vkCmdEndTransformFeedback2EXTDelegate vkCmdEndTransformFeedback2EXT_ptr;
+		public static void vkCmdEndTransformFeedback2EXT(VkCommandBuffer commandBuffer, uint firstCounterRange, uint counterRangeCount, VkBindTransformFeedbackBuffer2InfoEXT* pCounterInfos)
+			=> vkCmdEndTransformFeedback2EXT_ptr(commandBuffer, firstCounterRange, counterRangeCount, pCounterInfos);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDrawIndirectByteCount2EXTDelegate(VkCommandBuffer commandBuffer, uint instanceCount, uint firstInstance, VkBindTransformFeedbackBuffer2InfoEXT* pCounterInfo, uint counterOffset, uint vertexStride);
+		private static vkCmdDrawIndirectByteCount2EXTDelegate vkCmdDrawIndirectByteCount2EXT_ptr;
+		public static void vkCmdDrawIndirectByteCount2EXT(VkCommandBuffer commandBuffer, uint instanceCount, uint firstInstance, VkBindTransformFeedbackBuffer2InfoEXT* pCounterInfo, uint counterOffset, uint vertexStride)
+			=> vkCmdDrawIndirectByteCount2EXT_ptr(commandBuffer, instanceCount, firstInstance, pCounterInfo, counterOffset, vertexStride);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDrawMeshTasksIndirect2EXTDelegate(VkCommandBuffer commandBuffer, VkDrawIndirect2InfoKHR* pInfo);
+		private static vkCmdDrawMeshTasksIndirect2EXTDelegate vkCmdDrawMeshTasksIndirect2EXT_ptr;
+		public static void vkCmdDrawMeshTasksIndirect2EXT(VkCommandBuffer commandBuffer, VkDrawIndirect2InfoKHR* pInfo)
+			=> vkCmdDrawMeshTasksIndirect2EXT_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdDrawMeshTasksIndirectCount2EXTDelegate(VkCommandBuffer commandBuffer, VkDrawIndirectCount2InfoKHR* pInfo);
+		private static vkCmdDrawMeshTasksIndirectCount2EXTDelegate vkCmdDrawMeshTasksIndirectCount2EXT_ptr;
+		public static void vkCmdDrawMeshTasksIndirectCount2EXT(VkCommandBuffer commandBuffer, VkDrawIndirectCount2InfoKHR* pInfo)
+			=> vkCmdDrawMeshTasksIndirectCount2EXT_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate void vkCmdWriteMarkerToMemoryAMDDelegate(VkCommandBuffer commandBuffer, VkMemoryMarkerInfoAMD* pInfo);
+		private static vkCmdWriteMarkerToMemoryAMDDelegate vkCmdWriteMarkerToMemoryAMD_ptr;
+		public static void vkCmdWriteMarkerToMemoryAMD(VkCommandBuffer commandBuffer, VkMemoryMarkerInfoAMD* pInfo)
+			=> vkCmdWriteMarkerToMemoryAMD_ptr(commandBuffer, pInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate VkResult vkCreateAccelerationStructure2KHRDelegate(VkDevice device, VkAccelerationStructureCreateInfo2KHR* pCreateInfo, VkAllocationCallbacks* pAllocator, VkAccelerationStructureKHR* pAccelerationStructure);
+		private static vkCreateAccelerationStructure2KHRDelegate vkCreateAccelerationStructure2KHR_ptr;
+		public static VkResult vkCreateAccelerationStructure2KHR(VkDevice device, VkAccelerationStructureCreateInfo2KHR* pCreateInfo, VkAllocationCallbacks* pAllocator, VkAccelerationStructureKHR* pAccelerationStructure)
+			=> vkCreateAccelerationStructure2KHR_ptr(device, pCreateInfo, pAllocator, pAccelerationStructure);
+
+		[UnmanagedFunctionPointer(CallConv)]
 		private delegate void vkCmdSetFragmentShadingRateEnumNVDelegate(VkCommandBuffer commandBuffer, VkFragmentShadingRateNV shadingRate, VkFragmentShadingRateCombinerOpKHR* combinerOps);
 		private static vkCmdSetFragmentShadingRateEnumNVDelegate vkCmdSetFragmentShadingRateEnumNV_ptr;
 		public static void vkCmdSetFragmentShadingRateEnumNV(VkCommandBuffer commandBuffer, VkFragmentShadingRateNV shadingRate, VkFragmentShadingRateCombinerOpKHR* combinerOps)
@@ -4128,6 +4260,18 @@ namespace Evergine.Bindings.Vulkan
 			=> vkUpdateIndirectExecutionSetShaderEXT_ptr(device, indirectExecutionSet, executionSetWriteCount, pExecutionSetWrites);
 
 		[UnmanagedFunctionPointer(CallConv)]
+		private delegate VkResult vkGetDeviceFaultReportsKHRDelegate(VkDevice device, ulong timeout, uint* pFaultCounts, VkDeviceFaultInfoKHR* pFaultInfo);
+		private static vkGetDeviceFaultReportsKHRDelegate vkGetDeviceFaultReportsKHR_ptr;
+		public static VkResult vkGetDeviceFaultReportsKHR(VkDevice device, ulong timeout, uint* pFaultCounts, VkDeviceFaultInfoKHR* pFaultInfo)
+			=> vkGetDeviceFaultReportsKHR_ptr(device, timeout, pFaultCounts, pFaultInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
+		private delegate VkResult vkGetDeviceFaultDebugInfoKHRDelegate(VkDevice device, VkDeviceFaultDebugInfoKHR* pDebugInfo);
+		private static vkGetDeviceFaultDebugInfoKHRDelegate vkGetDeviceFaultDebugInfoKHR_ptr;
+		public static VkResult vkGetDeviceFaultDebugInfoKHR(VkDevice device, VkDeviceFaultDebugInfoKHR* pDebugInfo)
+			=> vkGetDeviceFaultDebugInfoKHR_ptr(device, pDebugInfo);
+
+		[UnmanagedFunctionPointer(CallConv)]
 		private delegate VkResult vkCreateSurfaceOHOSDelegate(VkInstance instance, VkSurfaceCreateInfoOHOS* pCreateInfo, VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 		private static vkCreateSurfaceOHOSDelegate vkCreateSurfaceOHOS_ptr;
 		public static VkResult vkCreateSurfaceOHOS(VkInstance instance, VkSurfaceCreateInfoOHOS* pCreateInfo, VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface)
@@ -4743,6 +4887,28 @@ namespace Evergine.Bindings.Vulkan
 			NativeLib.LoadFunction("vkGetImageViewOpaqueCaptureDescriptorDataEXT",  out vkGetImageViewOpaqueCaptureDescriptorDataEXT_ptr);
 			NativeLib.LoadFunction("vkGetSamplerOpaqueCaptureDescriptorDataEXT",  out vkGetSamplerOpaqueCaptureDescriptorDataEXT_ptr);
 			NativeLib.LoadFunction("vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT",  out vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT_ptr);
+			NativeLib.LoadFunction("vkCmdBindIndexBuffer3KHR",  out vkCmdBindIndexBuffer3KHR_ptr);
+			NativeLib.LoadFunction("vkCmdBindVertexBuffers3KHR",  out vkCmdBindVertexBuffers3KHR_ptr);
+			NativeLib.LoadFunction("vkCmdDrawIndirect2KHR",  out vkCmdDrawIndirect2KHR_ptr);
+			NativeLib.LoadFunction("vkCmdDrawIndexedIndirect2KHR",  out vkCmdDrawIndexedIndirect2KHR_ptr);
+			NativeLib.LoadFunction("vkCmdDispatchIndirect2KHR",  out vkCmdDispatchIndirect2KHR_ptr);
+			NativeLib.LoadFunction("vkCmdCopyMemoryKHR",  out vkCmdCopyMemoryKHR_ptr);
+			NativeLib.LoadFunction("vkCmdCopyMemoryToImageKHR",  out vkCmdCopyMemoryToImageKHR_ptr);
+			NativeLib.LoadFunction("vkCmdCopyImageToMemoryKHR",  out vkCmdCopyImageToMemoryKHR_ptr);
+			NativeLib.LoadFunction("vkCmdUpdateMemoryKHR",  out vkCmdUpdateMemoryKHR_ptr);
+			NativeLib.LoadFunction("vkCmdFillMemoryKHR",  out vkCmdFillMemoryKHR_ptr);
+			NativeLib.LoadFunction("vkCmdCopyQueryPoolResultsToMemoryKHR",  out vkCmdCopyQueryPoolResultsToMemoryKHR_ptr);
+			NativeLib.LoadFunction("vkCmdDrawIndirectCount2KHR",  out vkCmdDrawIndirectCount2KHR_ptr);
+			NativeLib.LoadFunction("vkCmdDrawIndexedIndirectCount2KHR",  out vkCmdDrawIndexedIndirectCount2KHR_ptr);
+			NativeLib.LoadFunction("vkCmdBeginConditionalRendering2EXT",  out vkCmdBeginConditionalRendering2EXT_ptr);
+			NativeLib.LoadFunction("vkCmdBindTransformFeedbackBuffers2EXT",  out vkCmdBindTransformFeedbackBuffers2EXT_ptr);
+			NativeLib.LoadFunction("vkCmdBeginTransformFeedback2EXT",  out vkCmdBeginTransformFeedback2EXT_ptr);
+			NativeLib.LoadFunction("vkCmdEndTransformFeedback2EXT",  out vkCmdEndTransformFeedback2EXT_ptr);
+			NativeLib.LoadFunction("vkCmdDrawIndirectByteCount2EXT",  out vkCmdDrawIndirectByteCount2EXT_ptr);
+			NativeLib.LoadFunction("vkCmdDrawMeshTasksIndirect2EXT",  out vkCmdDrawMeshTasksIndirect2EXT_ptr);
+			NativeLib.LoadFunction("vkCmdDrawMeshTasksIndirectCount2EXT",  out vkCmdDrawMeshTasksIndirectCount2EXT_ptr);
+			NativeLib.LoadFunction("vkCmdWriteMarkerToMemoryAMD",  out vkCmdWriteMarkerToMemoryAMD_ptr);
+			NativeLib.LoadFunction("vkCreateAccelerationStructure2KHR",  out vkCreateAccelerationStructure2KHR_ptr);
 			NativeLib.LoadFunction("vkCmdSetFragmentShadingRateEnumNV",  out vkCmdSetFragmentShadingRateEnumNV_ptr);
 			NativeLib.LoadFunction("vkCmdDrawMeshTasksEXT",  out vkCmdDrawMeshTasksEXT_ptr);
 			NativeLib.LoadFunction("vkCmdDrawMeshTasksIndirectEXT",  out vkCmdDrawMeshTasksIndirectEXT_ptr);
@@ -4923,6 +5089,8 @@ namespace Evergine.Bindings.Vulkan
 			NativeLib.LoadFunction("vkDestroyIndirectExecutionSetEXT",  out vkDestroyIndirectExecutionSetEXT_ptr);
 			NativeLib.LoadFunction("vkUpdateIndirectExecutionSetPipelineEXT",  out vkUpdateIndirectExecutionSetPipelineEXT_ptr);
 			NativeLib.LoadFunction("vkUpdateIndirectExecutionSetShaderEXT",  out vkUpdateIndirectExecutionSetShaderEXT_ptr);
+			NativeLib.LoadFunction("vkGetDeviceFaultReportsKHR",  out vkGetDeviceFaultReportsKHR_ptr);
+			NativeLib.LoadFunction("vkGetDeviceFaultDebugInfoKHR",  out vkGetDeviceFaultDebugInfoKHR_ptr);
 			NativeLib.LoadFunction("vkCreateSurfaceOHOS",  out vkCreateSurfaceOHOS_ptr);
 			NativeLib.LoadFunction("vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV",  out vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV_ptr);
 			NativeLib.LoadFunction("vkGetMemoryMetalHandleEXT",  out vkGetMemoryMetalHandleEXT_ptr);

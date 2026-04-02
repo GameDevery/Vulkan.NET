@@ -45,13 +45,7 @@ namespace VulkanGen
 
         public static string GetPrettyEnumName(string value)
         {
-            int start;
-            if ((start = value.IndexOf("bit", StringComparison.OrdinalIgnoreCase)) != -1)
-            {
-                return value.Remove(start, 3);
-            }
-
-            return value;
+            return value.Replace("FlagBits", "Flags");
         }
 
         public static uint GetTypeSize(string type)
@@ -149,7 +143,7 @@ namespace VulkanGen
                 case "int16_t":
                     return "short";
                 case "int16_t*":
-                    return "int16*";
+                    return "short*";
                 case "uint32_t":
                 case "DWORD":
                     return "uint";

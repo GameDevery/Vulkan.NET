@@ -34,7 +34,7 @@ namespace Evergine.Bindings.Vulkan
 	public unsafe delegate void PFN_vkVoidFunction();
 
 	public unsafe delegate VkBool32 PFN_vkDebugReportCallbackEXT(
-		uint flags,
+		VkDebugReportFlagsEXT flags,
 		VkDebugReportObjectTypeEXT objectType,
 		ulong vkObject,
 		UIntPtr location,
@@ -45,7 +45,7 @@ namespace Evergine.Bindings.Vulkan
 
 	public unsafe delegate VkBool32 PFN_vkDebugUtilsMessengerCallbackEXT(
 		VkDebugUtilsMessageSeverityFlagsEXT messageSeverity,
-		uint messageTypes,
+		VkDebugUtilsMessageTypeFlagsEXT messageTypes,
 		VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
 		void* pUserData);
 

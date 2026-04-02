@@ -438,8 +438,12 @@ namespace Evergine.Bindings.Vulkan
 		public const string VK_AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME = "VK_AMD_shader_core_properties2";
 		public const uint VK_AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION = 1;
 		public const string VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME = "VK_AMD_device_coherent_memory";
+		public const uint VK_KHR_SHADER_CONSTANT_DATA_SPEC_VERSION = 1;
+		public const string VK_KHR_SHADER_CONSTANT_DATA_EXTENSION_NAME = "VK_KHR_shader_constant_data";
 		public const uint VK_KHR_DYNAMIC_RENDERING_LOCAL_READ_SPEC_VERSION = 1;
 		public const string VK_KHR_DYNAMIC_RENDERING_LOCAL_READ_EXTENSION_NAME = "VK_KHR_dynamic_rendering_local_read";
+		public const uint VK_KHR_SHADER_ABORT_SPEC_VERSION = 1;
+		public const string VK_KHR_SHADER_ABORT_EXTENSION_NAME = "VK_KHR_shader_abort";
 		public const uint VK_EXT_SHADER_IMAGE_ATOMIC_INT64_SPEC_VERSION = 1;
 		public const string VK_EXT_SHADER_IMAGE_ATOMIC_INT64_EXTENSION_NAME = "VK_EXT_shader_image_atomic_int64";
 		public const uint VK_KHR_SHADER_QUAD_CONTROL_SPEC_VERSION = 1;
@@ -568,6 +572,8 @@ namespace Evergine.Bindings.Vulkan
 		public const string VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME = "VK_KHR_synchronization2";
 		public const uint VK_EXT_DESCRIPTOR_BUFFER_SPEC_VERSION = 1;
 		public const string VK_EXT_DESCRIPTOR_BUFFER_EXTENSION_NAME = "VK_EXT_descriptor_buffer";
+		public const uint VK_KHR_DEVICE_ADDRESS_COMMANDS_SPEC_VERSION = 1;
+		public const string VK_KHR_DEVICE_ADDRESS_COMMANDS_EXTENSION_NAME = "VK_KHR_device_address_commands";
 		public const uint VK_EXT_GRAPHICS_PIPELINE_LIBRARY_SPEC_VERSION = 1;
 		public const string VK_EXT_GRAPHICS_PIPELINE_LIBRARY_EXTENSION_NAME = "VK_EXT_graphics_pipeline_library";
 		public const uint VK_AMD_SHADER_EARLY_AND_LATE_FRAGMENT_TESTS_SPEC_VERSION = 1;
@@ -893,6 +899,8 @@ namespace Evergine.Bindings.Vulkan
 		public const string VK_NV_PARTITIONED_ACCELERATION_STRUCTURE_EXTENSION_NAME = "VK_NV_partitioned_acceleration_structure";
 		public const uint VK_EXT_DEVICE_GENERATED_COMMANDS_SPEC_VERSION = 1;
 		public const string VK_EXT_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME = "VK_EXT_device_generated_commands";
+		public const uint VK_KHR_DEVICE_FAULT_SPEC_VERSION = 1;
+		public const string VK_KHR_DEVICE_FAULT_EXTENSION_NAME = "VK_KHR_device_fault";
 		public const uint VK_KHR_MAINTENANCE_8_SPEC_VERSION = 1;
 		public const string VK_KHR_MAINTENANCE_8_EXTENSION_NAME = "VK_KHR_maintenance8";
 		public const uint VK_MESA_IMAGE_ALIGNMENT_CONTROL_SPEC_VERSION = 1;

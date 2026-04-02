@@ -59,7 +59,7 @@ namespace VulkanGen
                             if (bitPosString != null)
                             {
                                 int shift = int.Parse(bitPosString);
-                                valueString = (1 << shift).ToString();
+                                valueString = (1L << shift).ToString();
                             }
                             else
                             {

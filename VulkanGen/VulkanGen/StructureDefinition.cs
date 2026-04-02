@@ -139,7 +139,6 @@ namespace VulkanGen
                     case "uint32_t*":
                     case "int32_t":
                     case "int32_t*":
-                    case "size_t":
                     case "float":
                     case "float*":
                         return 4;
@@ -149,6 +148,7 @@ namespace VulkanGen
                     case "int64_t*":
                     case "double":
                     case "double*":
+                    case "size_t":
                     case "void":
                         return 8;
                     case "VkBool32":

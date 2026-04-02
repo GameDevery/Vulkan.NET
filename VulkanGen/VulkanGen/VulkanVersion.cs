@@ -40,7 +40,7 @@ namespace VulkanGen
 
                         EnumValue newValue = new EnumValue();
                         newValue.Name = enumType.Name;
-                        newValue.Value = int.Parse(enumType.Value);
+                        newValue.Value = long.Parse(enumType.Value);
                         enumDefinition.Values.Add(newValue);
                     }
                 }
@@ -103,7 +103,7 @@ namespace VulkanGen
                         {
                             EnumValue newValue = new EnumValue();
                             newValue.Name = enumType.Name;
-                            newValue.Value = int.Parse(enumType.Value);
+                            newValue.Value = long.Parse(enumType.Value);
                             enumDefinition.Values.Add(newValue);
                         }
                     }
